@@ -2,7 +2,6 @@ from django.db import models
 from django.core.validators import MinLengthValidator
 from django.db.models import Avg
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-from .validators import *
 # Create your models here.
 
 class UserManager(BaseUserManager):
@@ -30,7 +29,7 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     username = models.CharField(max_length=300, unique=True)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=300, validators=[MinLengthValidator(8), validate_password])
+    password = models.CharField(max_length=300, validators=[MinLengthValidator(8)])
     first_name = models.CharField(max_length=300)
     last_name = models.CharField(max_length=300)
     date_joined = models.DateField(auto_now_add=True)
