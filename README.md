@@ -49,10 +49,12 @@ Steps to set up a project locally:
    ( python manage.py startapp base )
 4. Install the requirements.txt
    ( pip install -r requirements.txt )
-5. Makemigrations and migrate
+5. Create Models Views and serializers as well as other files
+   (Or you can copy them from above)
+6. Makemigrations and migrate
    ( python manage.py makemigrations )
    ( python manage.py migrate )
-6. Run the server
+7. Run the server
    ( python manage.py runserver)
-7. Create a endpoints in Postman
-8. Test the endpoints
+8. Create a endpoints in Postman
+9. Test the endpoints
